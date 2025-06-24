@@ -1,13 +1,4 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Tutorial;
 
@@ -16,8 +7,23 @@ namespace Tutorial;
 /// </summary>
 public partial class MainWindow : Window
 {
+    private bool _toggle = true;
+    
     public MainWindow()
     {
         InitializeComponent();
+    }
+
+    private void Button_OnClick(object sender, RoutedEventArgs e)
+    {
+        if (!_toggle)
+        {
+            Button.Content = "Okay, stop now.";
+        }
+        else
+        {
+            Button.Content = "HAHA, Nerd!!";
+            _toggle = false;
+        }
     }
 }

@@ -7,8 +7,18 @@
         mc:Ignorable="d"
         Title="Desktop Tutorial Application" Height="450" Width="800">
     <Grid>
-        <Button Background="BlueViolet" Width="65" Height="30">
-            Button
+        <Button 
+            Name="Button" 
+            Background="GreenYellow" 
+            FontWeight="DemiBold"
+            BorderThickness="0"
+            Width="100" 
+            Height="30"
+            Cursor="Hand"
+            
+            Click="Button_OnClick"
+            >
+            Get Dunked On
         </Button>
     </Grid>
 </Window>
