@@ -7,18 +7,31 @@
         mc:Ignorable="d"
         Title="Desktop Tutorial Application" Height="450" Width="800">
     <Grid>
-        <Button 
-            Name="Button" 
-            Background="GreenYellow" 
-            FontWeight="DemiBold"
-            BorderThickness="0"
-            Width="100" 
-            Height="30"
-            Cursor="Hand"
-            
-            Click="Button_OnClick"
-            >
-            Get Dunked On
-        </Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <!-- Header (Menu bar) -->
+        <Rectangle Grid.ColumnSpan="2" Fill="MidnightBlue" />
+        
+        <!-- Main Container -->
+        <Grid Row="1" Column="0" ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="60*" />
+                <ColumnDefinition Width="20*" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Fill="GreenYellow" />
+            <Rectangle Grid.Column="1" Fill="AliceBlue" />
+            <Rectangle Grid.Column="2" Fill="GreenYellow" />
+        </Grid>
+        
+        <!-- Footer -->
+        <Rectangle Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Fill="Beige" />
     </Grid>
 </Window>
